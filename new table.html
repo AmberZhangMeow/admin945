@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/libs/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery.columns.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/libs/clean.css"/>
+</head>
+<body>
+<table id="example" class="display" cellspacing="0" width="100%">
+<div id="columns"></div>
+<script>
+    $.ajax({
+    url:'account.json',
+    dataType: 'json',
+    success: function(json) {
+        example2 = $('#columns').columns({
+            data:json,
+        });
+    }
+});
+</script>
+
+
+</body>
+</html>
+</body>
+</html>

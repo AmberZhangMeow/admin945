@@ -1,0 +1,1 @@
+[{"enabled":true,"id":1,"appid":"30c3a29a84fd483fb5756a2d44faf2ac","appkey":"8e40ccd88f67451e97949b20d2c6c402","name":"321游戏平台","credenceTypes":"yes","status":"NORMAL","createTime":"2015-04-28 03:52:47","updateTime":"2015-04-28 03:52:47"}]
