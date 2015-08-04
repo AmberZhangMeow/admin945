@@ -11,29 +11,23 @@
 <table id="example" class="display" cellspacing="0" width="100%">
     <thead>
     <tr>
-        <th>enabled</th>
-        <th>ID</th>
+        <th>Name</th>
         <th>Appid</th>
         <th>Appkey</th>
-        <th>name</th>
         <th>CredenceTypes</th>
         <th>Status</th>
         <th>CreateTime</th>
-        <th>updateTime</th>
     </tr>
     </thead>
 
     <tfoot>
     <tr>
-        <th>enabled</th>
-        <th>ID</th>
+        <th>Name</th>
         <th>Appid</th>
         <th>Appkey</th>
-        <th>name</th>
         <th>CredenceTypes</th>
         <th>Status</th>
         <th>CreateTime</th>
-        <th>updateTime</th>
     </tr>
     </tfoot>
 </table>
@@ -43,18 +37,24 @@
             "processing": true,
             "ajax": "account.json",
             "columns": [
-                { "data": "enabled" },
-                { "data": "id" },
+                { "data": "name" },
                 { "data": "appid" },
                 { "data": "appkey" },
-                { "data": "name" },
                 { "data": "credenceTypes.0.authenType"},
                 { "data": "status" },
-                { "data": "createTime" },
-                { "data": "updateTime" }
+                { "data": "createTime" }],
+       "columnDefs": [
+                {   "bRetrieve": true,
+                    "targets": [ 2 ],
+                    "visible": false
+                }
             ]
         } );
-    } )
+      $('#example tbody').on('click', 'tr', function () {
+            var name = $('td', this).eq(1).text();
+            alert( 'Appkey:'+name);
+        } );
+    } );
 </script>
 </body>
 </html>
