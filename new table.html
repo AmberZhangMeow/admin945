@@ -17,6 +17,18 @@
     success: function(json) {
         example2 = $('#columns').columns({
             data:json,
+            plugins:['date'],
+            schema: [
+                {"header":"Name", "key":"name"},
+                {"header":"ID", "key":"id"},
+                {"header":"Appid", "key":"appid"},
+                {"header":"Appkey", "key":"appkey","template":"<a href='appkey.png'></a>"},
+                {"header":"CredenceTypes", "key":"credenceTypes","template":"{{credenceTypes.authenType}}"},
+                {"header":"Status", "key":"status"},
+                {"header":"CreateTime", "key":"createTime","template":"{{createTime}}"},
+                {"header":"Backup", "template":"<input type='button' id='btn1'>"},
+                {"header":"Backup", "template":"<input type='button' id='btn2'>"},
+            ]
         });
     }
 });
